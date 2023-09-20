@@ -7,5 +7,9 @@ app = Flask(__name__)
 def hello_world():
 	return '<H1>Hello world!</H1>'
 
+@app.route('/user/<name>')
+def user(name):
+	return '<H1>Hello, {}!</H1>'.format(name)
+
 if __name__ == '__main__':
 	app.run()
