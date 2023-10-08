@@ -29,7 +29,7 @@ def contains_and(form, field):
 
 class NameForm(FlaskForm):
 	name = StringField('What is your name?', validators=[DataRequired()])
-	email = StringField('What is your UofT Email address?', validators=[DataRequired(), contains_and, utoronto])
+	email = StringField('What is your UofT Email address?', validators=[DataRequired(), contains_and, contains_utoronto])
 	submit = SubmitField('Submit')
 
 
